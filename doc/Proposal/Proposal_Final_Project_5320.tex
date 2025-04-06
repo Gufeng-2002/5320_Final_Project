@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{geometry}
+[
+    a4paper,
+    left=1in,
+    right=1in,
+    top=1in,
+    bottom=1in
+]
+
+\title{Proposal for the Final Project STAT 5320}
+\author{Anti Li(T00751339), Feng Gu(T00751197), Yuzhuo Ye(T00751492)}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section{Team members}
+Our group has three members:
+
+\textbf{Anti Li(T00751339), Feng Gu(T00751197), Yuzhuo Ye(T00751492)}.
+
+\section{Meeting and discussion}
+We discussed the project with one meeting and one discussion. The meeting was on Mar 12 afternoon,
+in person. The discussion was held online.
+
+\textbf{Discussion(online):}
+\begin{itemize}
+    \item Time: Mar 9, around 18:00
+    \item Content:
+        Discussed the major task type in our project, and talked about the skills might be used in the project.
+        Decided the formal meeting time and the possible data set we might choose.
+\end{itemize}
+
+\textbf{Meeting(in person):}
+\begin{itemize}
+    \item Time: Mar 12, from 14:00 to 15:40
+    \item Content:
+        Discussed the general idea, steps and the exercises that can be finished in the project. Decided the data set we are going to use.
+        Divided the work into different parts and roughly assigned the tasks to each member.
+\end{itemize}
+
+\section{Data set to be used}
+The data set we are going to use is the \textbf{Energy Appliances} data set. 
+Its shape is \textbf{(19735, 29)} and the data is about the energy consumption of appliances in a low energy building.
+The data set is collected in a house with a total of 10 electrical appliances. 
+It is noticeable that the data was collected every 10 minutes for about 4.5 months,
+which means there are some time series features in it. 
+However, we would not focus on the time series analysis
+that is beyond the scope of this project and thereby we would make some assumptions to simplify our analysis.
+
+Table \ref{tab:energy_appliances} shows the data variables in the Energy Appliances data set.
+\begin{table}[!h]
+    \centering
+    \caption{Data Variables in the Energy Appliances Data Set}
+    \begin{tabular}{l l c}
+        \toprule
+        \textbf{Data Variables} & \textbf{Units} & \textbf{Number of Features} \\
+        \midrule
+        Appliances energy consumption & Wh & 1 \\
+        Light energy consumption & Wh & 2 \\
+        $T_i$: Temperature in room $i$ & °C & 3-21 \\
+        $RH_i$: Humidity in room $i$ & \% & 4-20 \\
+        Temperature outside & °C & 21 \\
+        Pressure  & mm Hg & 22 \\
+        Humidity outside & \% & 23 \\
+        Windspeed & m/s & 24 \\
+        Visibility & km & 25 \\
+        Dew point & °C & 26 \\
+        Random Variable 1 (RV\_1) & - & 27 \\
+        Random Variable 2 (RV\_2) & - & 28 \\
+        Number of seconds from midnight  & s & 29 \\
+        Week status (weekend or weekday) & - & 30 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:energy_appliances}
+\end{table}
+
+\section{Major tasks and exercises will be done}
+\subsection{Major tasks:}
+\begin{itemize}
+    \item Data cleaning and preprocessing, including missing value imputation,
+    detecting and handling outliers, data transformation, etc.
+
+    \item Exploratory data analysis, including data visualization, correlation analysis.
+
+    \item Model building and comparison, including using different improvement techniques to
+    improve the model performance, like feature selection, hyper-parameter\(\lambda\) tuning, etc.
+
+    \item Model evaluation, including using different metrics to evaluate the model performance.
+        Test the selected model on the test set and assess its performance.
+\end{itemize}
+
+\subsection{Corresponding exercises:}
+\begin{itemize}
+    \item Residual analysis.
+    \item Multiple linear regression.
+    \item Creating and using dummy variables.
+    \item Variables selection.
+    \item Perform statistics inference on a coefficient.
+    \item *We might try to change the assumption about the residual in MLE for estimating 
+    the coefficients in regression, which we had tried a little bit in the assignment 2 last week.
+    But it depends on the time and the progress of the project.
+
+    \href{https://github.com/Gufeng-2002/5320_Assignment_2/blob/main/LikelihoodEstimator.ipynb}{Click here to see the previous code of trying it.}
+\end{itemize}
+
+\section{Attestation}
+We attest that \textbf{no team member} has analyzed the data in any relevant way previously.
+We will also not plagiarize ideas or solutions from others to complete the project, even though other people 
+might have done similar projects on top of the same data set.
+
+\section{Temporary Schedule for the Project}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|p{5cm}|l|l|}
+        \hline
+        \textbf{Tasks} & \textbf{Content} & \textbf{Name} & \textbf{Due Date} \\
+        \hline
+        Draft abstract & Summary of our report, covering the general work and conclusions & Yuzhuo Ye & mat 20th \\
+        \hline
+        Introduction & Why doing the research and how & Yuzhuo Ye & Mar 24th \\
+        \hline
+        Data preparation & Preparing, cleaning, transforming, and description & Anti Li & Mar 24th \\
+        \hline
+        Fitting model and doing tests & Searching a good model and making sure models pass statistical tests & Anti Li, Feng Gu & Mar 25th \\
+        \hline
+        Results & Explaining results for practical meanings, thinking drawbacks and possible improvements & Yuzhuo Ye, Feng Gu & Mar 27th \\
+        \hline
+        Discussion/Conclusion & Potential future work derived from our work and the following work that could be done to improve it. The meaning of our report in the real world. & Anti Li, Yuzhuo Ye & Mar 28th \\
+        \hline
+        Checking and refining & Checking core contents in the report, making possible improvements and organizing them in a clearer way. & Feng Gu & Mar 31th \\
+        \hline
+    \end{tabular}
+    \caption{Overview of Tasks and Responsibilities}
+\end{table}
+
+\end{document}
